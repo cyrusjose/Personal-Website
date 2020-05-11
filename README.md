@@ -1,3 +1,3 @@
 # homeworkTwo
 
-We will be making a responsive portfolio
+We will be making a responsive portfolio using CSS bootstrap
