@@ -23,8 +23,12 @@
 
       // CODE GOES HERE
       // This will run through the array
-      for (var i = 0; i < coolPeople.length; i++) {
+      var myArray = coolPeople.length
+      for (var i = 0; i < myArray; i++) {
         // Print out the item in the array and make it all Upper
+        console.log("-----------------------------")
+        console.log("The current index is " + i);
+        console.log("-----------------------------")
         console.log(coolPeople[i].toUpperCase());
       }
 
