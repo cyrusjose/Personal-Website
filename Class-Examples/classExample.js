@@ -1,0 +1,1 @@
+var nickCharacters = ["Tommy", "Doug", "Oblina"]
