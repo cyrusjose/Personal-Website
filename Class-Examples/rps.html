@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Printing</title>
+  </head>
+  <body>
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+      var choice = ["r", "p", "s"];
+      var wins = 0;
+      var losses = 0;
+      var ties = 0;
+
+
+      for (var i = 0; i < 4; i++) {
+        var compChoice = Math.floor(Math.random() * choice.length);
+        var userGuess = prompt("Pick \" r \" for rock, \" p \" for paper, \" s \" for scissors.");
+        userGuess = userGuess.toLowerCase();
+        var computerGuess = choice[compChoice];
+        if ((userGuess === "p" && computerGuess === "r") || 
+        (userGuess === "r" && computerGuess === "s") || 
+        (userGuess === "s" && computerGuess === "p")) {
+            alert("You win!!");
+            wins++;
+            alert("You won " + wins + " time(s)!");
+        }
+        else if (userGuess === computerGuess){
+            alert("It's a tie!");
+            ties++;
+            alert("We tied " + ties + " time(s)!");
+        }
+        else {
+            alert("You lost, sorry.");
+            losses++;
+            alert("You lost " + losses + " time(s)!");
+        }
+      };
+      alert("Results \n" + "Win(s): " + wins + "\n" + 
+      "Tie(s):" + ties + "\n" + 
+      "Loss(es): " + losses);    
+      </script>
+  </body>
+</html>
