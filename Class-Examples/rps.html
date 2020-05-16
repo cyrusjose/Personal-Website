@@ -8,6 +8,8 @@
     <h1>Open the console to see the magic!</h1>
 
     <script>
+
+      // Decalre variables 
       var choice = ["r", "p", "s"];
       var wins = 0;
       var losses = 0;
@@ -15,28 +17,37 @@
 
 
       for (var i = 0; i < 4; i++) {
+        // create variable for computer's random choices: r, p, or s
         var compChoice = Math.floor(Math.random() * choice.length);
+        // Prompt the user and store it in variable
         var userGuess = prompt("Pick \" r \" for rock, \" p \" for paper, \" s \" for scissors.");
+        // Ensure that user guesses will be lower cases
         userGuess = userGuess.toLowerCase();
+        // Ask adam about this during office hours
         var computerGuess = choice[compChoice];
+        // Check for win/lose/tie conditions:
         if ((userGuess === "p" && computerGuess === "r") || 
         (userGuess === "r" && computerGuess === "s") || 
         (userGuess === "s" && computerGuess === "p")) {
-            alert("You win!!");
+          // check is for win conditions
+            alert("You win!!"); 
             wins++;
             alert("You won " + wins + " time(s)!");
         }
         else if (userGuess === computerGuess){
+          // check for tie conditions
             alert("It's a tie!");
             ties++;
             alert("We tied " + ties + " time(s)!");
         }
         else {
+          // Check for loss conditions.
             alert("You lost, sorry.");
             losses++;
             alert("You lost " + losses + " time(s)!");
         }
       };
+      // Gives a tally
       alert("Results \n" + "Win(s): " + wins + "\n" + 
       "Tie(s):" + ties + "\n" + 
       "Loss(es): " + losses);    
