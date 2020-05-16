@@ -6,49 +6,68 @@
   </head>
   <body>
     <h1>Open the console to see the magic!</h1>
-<!-- Saturday May, 16 2020 -->
-<!-- Activity One  -->
- <script>
+    <!-- Saturday May, 16 2020 -->
+
+    <!-- Example One  -->
+    <script>
       // Using the given arrays, complete the questions below!
       // Instructions:
 
       // Rows of Students
-      var studentsRow1 = ["Rachelle", "Jacob", "Jerome", "Greg", "Matt", "Walt"];
+      var studentsRow1 = [
+        "Rachelle",
+        "Jacob",
+        "Jerome",
+        "Greg",
+        "Matt",
+        "Walt",
+      ];
       var studentsRow2 = ["Jeremiah", "Luis", "Nathan", "Analben"];
       var studentsRow3 = ["Aisha", "Stephen", "John"];
 
       // Entire Class
       var entireClass = [studentsRow1, studentsRow2, studentsRow3];
 
-
       // How do we print out every single student in Row 1?
-        for (var i = 0; i < studentsRow1.length; i++){
-            console.log(studentsRow1[i]);
-        }
+      for (var i = 0; i < studentsRow1.length; i++) {
+        console.log(studentsRow1[i]);
+      }
 
       // How do we print out every student in Row 2 whose first name begins with J?
-        for (var i = 0; i < studentsRow2.length; i++){
-           if (studentsRow2[i].charAt(0) === "J"){
-             console.log(studentsRow2[i]);
-           }
+      for (var i = 0; i < studentsRow2.length; i++) {
+        if (studentsRow2[i].charAt(0) === "J") {
+          console.log(studentsRow2[i]);
         }
+      }
 
       // Using the entireClass array, how do we access the second student in row 3?
-        console.log(entireClass[1][1]);
+      console.log(entireClass[1][1]);
 
       // Using the entireClass array, how do we access the third student in row 2?
-        console.log(entireClass[1][2]);
-
+      console.log(entireClass[1][2]);
     </script>
-<!-- Activity One  -->
+    <!-- Example One  -->
 
-<!-- Activity Two  -->
+    <!-- Example Two  -->
     <!-- Without a Function -->
     <script>
-        // Various Arrays
+      // Various Arrays
       var brands = ["Acer", "Apple", "Sony", "Samsung"];
-      var heroes = ["Black Panther", "Cyborg", "Black Canary", "Donna Troy", "Huntress", "Blue Beetle", "Captain Atom"];
-      var booksOnMyShelf = ["Calculus Early Transcendentals", "Ravens", "The Self Illusion", "Harry Potter"];
+      var heroes = [
+        "Black Panther",
+        "Cyborg",
+        "Black Canary",
+        "Donna Troy",
+        "Huntress",
+        "Blue Beetle",
+        "Captain Atom",
+      ];
+      var booksOnMyShelf = [
+        "Calculus Early Transcendentals",
+        "Ravens",
+        "The Self Illusion",
+        "Harry Potter",
+      ];
       var thingsInFrontOfMe = ["Laptop", "Beanbag", "Cats", "Slippers"];
       var howIFeel = ["Sleep Deprived", "Wired on Coffee", "Excited"];
 
@@ -81,17 +100,29 @@
         console.log(howIFeel[m]);
       }
       console.log("---------");
- 
     </script>
     <!-- With a Function -->
     <script>
-         // VARIABLES
+      // VARIABLES
       // =======================================================================================
 
       // Various Arrays
       var brands = ["Acer", "Apple", "Sony", "Samsung"];
-      var heroes = ["Black Panther", "Cyborg", "Black Canary", "Donna Troy", "Huntress", "Blue Beetle", "Captain Atom"];
-      var booksOnMyShelf = ["Calculus Early Transcendentals", "Ravens", "The Self Illusion", "Harry Potter"];
+      var heroes = [
+        "Black Panther",
+        "Cyborg",
+        "Black Canary",
+        "Donna Troy",
+        "Huntress",
+        "Blue Beetle",
+        "Captain Atom",
+      ];
+      var booksOnMyShelf = [
+        "Calculus Early Transcendentals",
+        "Ravens",
+        "The Self Illusion",
+        "Harry Potter",
+      ];
       var thingsInFrontOfMe = ["Laptop", "Beanbag", "Cats", "Slippers"];
       var howIFeel = ["Sleep Deprived", "Wired on Coffee", "Excited"];
 
@@ -101,16 +132,13 @@
       // Here we create a "Function" that allows us to "call" (run) the loop for any array we wish.
       // We pass in an array as an "argument".
       function consoleInside(arr) {
-
         // We then loop through the selected array.
         for (var i = 0; i < arr.length; i++) {
-
           // Each time we print the value inside the array.
           console.log(arr[i]);
         }
         console.log("---------");
       }
-
 
       // FUNCTION CALLS (Execution)
       // =======================================================================================
@@ -122,6 +150,118 @@
       consoleInside(thingsInFrontOfMe);
       consoleInside(howIFeel);
     </script>
-<!-- Activity Two -->
+    <!-- Example Two -->
+    <!-- Example Three -->
+    <script>
+      // FUNCTIONS
+      // ================================================================================
+
+      // Create a Function called "adder" that take three arguments (x, y, z).
+      // The function should add the arguments together, and log the result to the console.
+
+      function adder(x, y, z) {
+        var add = x + y + z;
+        console.log(add);
+      }
+
+      // Create a Function called "multiplier" that takes three arguments (x, y, z).
+      // The function should multiply the arguments, and log the result to the console.
+
+      function multiplier(x, y, z) {
+        var multi = x * y * z;
+        console.log(multi);
+      }
+
+      // Create a Function called "isString" that takes three arguments (x, y, z).
+      // "isString" determines if all three arguments are strings and logs an appropriate response to the console.
+
+      function isString(x, y, z) {
+        var strx = typeof x;
+        var stry = typeof y;
+        var strz = typeof z;
+        if (strx === "string" && stry === "string" && strz === "string") {
+          console.log("These values are all strings");
+        } else {
+          console.log(strx);
+          console.log(stry);
+          console.log(strz);
+        }
+      }
+
+      // Create a Function called "vowelChecker" that takes in a single argument (x).
+      // "vowlChecker" logs whether or not the input is a vowel.
+      var vowels = ["a", "e", "i", "o", "u"];
+      // Using the JS prebuilt funcition
+      function vowelChecker(x) {
+        if (vowels.includes(x)) {
+          console.log("This is a vowel");
+        } else {
+          console.log("This is a consonant");
+        }
+        // Laying it out in the if else statement
+        if (x === "a" || x === "e" || x === "i" || x === "o" || x === "u") {
+          console.log("This is a vowel");
+        } else {
+          console.log("This is a consonant");
+        }
+        // Using a For loop to check
+        var isAVowel = false; // A "switch" for the variable
+        // Run through the array "vowels"
+        for (var i = 0; i < vowels.length; i++) {
+          // Check to see if the argument matches an item of the array
+          if (vowels[i] === x) {
+            // Switches the variable to true if it matches
+            isAVowel = true;
+          }
+        }
+        // Uses the loop to check if we have vowel or a consonant.
+        if (isAVowel) {
+          console.log("This is a vowel");
+        } else {
+          console.log("This is a consanant");
+        }
+      }
+
+      // BONUS
+      // Creates a version of "adder" that returns its result. Function is called "adderReturn".
+      function adderReturn(x, y, z) {
+        var add = x + y + z;
+        return add;
+      }
+      // Creates a version of "multiplier" that returns its result. Function is called "multiplierReturn".
+      function multiplierReturn(x, y, z) {
+        var multi = x * y * z;
+        return multi;
+      }
+      // FUNCTION EXECUTION
+      // ================================================================================
+
+      // Add in the lines of code below necessary to call the functions we created above.
+
+      // Call the adder function here.
+      adder();
+
+      console.log("-------------------");
+
+      // Call the multiplier function here.
+
+      console.log("-------------------");
+
+      // Call the isString function here.
+
+      console.log("-------------------");
+
+      // Call the vowelChecker function here.
+
+      console.log("-------------------");
+
+      // BONUS
+      // Call the adderReturn function here and set it equal to a variable. Then log that variable to the console.
+
+      console.log("-------------------");
+
+      // Call the multiplierReturn function here and set it equal to a variable. Then log that variable to the console.
+    </script>
+    <!-- Example Three -->
   </body>
 </html>
