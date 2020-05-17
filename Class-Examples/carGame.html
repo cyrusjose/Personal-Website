@@ -8,63 +8,6 @@
     <h1>Open the console to see the magic!</h1>
     <!-- Saturday May, 16 2020 -->
     <!-- -------------------------------------------------------------- -->
-    <!-- Example Five: Car simple-->
-    <script>
-      var car = {
-        make: "Honda",
-        model: "Fit",
-        color: "Blue Raspberry",
-        mileage: 5000,
-        isWorking: true,
-
-        driveToWork: function () {
-          alert("Old Mileage: " + this.mileage);
-
-          this.mileage = this.mileage + 8;
-
-          alert("New mileage: " + this.mileage);
-        },
-
-        driveAroundWorld: function () {
-          alert("Old Mileage: " + this.mileage);
-
-          this.mileage = this.mileage + 24000;
-
-          alert("New Mileage: " + this.mileage);
-          alert("Car needs a tuneup!");
-
-          this.isWorking = false;
-        },
-
-        getTuneUp: function () {
-          alert("Car is ready to go!");
-          this.isWorking = true;
-        },
-
-        honk: function () {
-          alert("Honk! Honk!");
-        },
-      };
-
-      // How would we log...
-
-      // The car's make?
-      console.log(car.make);
-
-      // The car's model?
-      console.log(car.model);
-      // The car's mileage?
-      console.log(car.mileage);
-      // How would we run the car's driveToWork method?
-      car.driveToWork();
-      // How would we run the car's driveAroundWorld method?
-      car.driveAroundWorld();
-      // How would we run the getTuneUp method?
-      car.getTuneUp();
-      car.honk();
-    </script>
-    <!-- Example Five: Car simple-->
-    <!-- -------------------------------------------------------------- -->
     <!-- Example Five: car conditionals -->
     <script>
       // VARIABLES
@@ -147,34 +90,5 @@
       }
     </script>
     <!-- Example Five: car conditionals -->
-    <!-- -------------------------------------------------------------- -->
-    <!-- Example Five: Question Game -->
-    <script>
-      // Array of objects
-      var questions = [
-        { q: "The sky is blue.", a: "t" },
-        { q: "There are 365 days in a year.", a: "t" },
-        { q: "There are 42 ounces in a pound", a: "f" },
-        { q: "The Declaration of Independence was created in 1745", a: "f" },
-        { q: "Banans are vegetables", a: "f" },
-      ];
-      var score = 0;
-
-      for (var i = 0; i < questions.length; i++) {
-        var answer = confirm(questions[i].q);
-      }
-
-      if (
-        (answer === true && questions[i].a === "t") ||
-        (answer === false && questions[i].a === "f")
-      ) {
-        score++;
-        alert("Correct!");
-      } else {
-        alert("Wrong!");
-      }
-      alert("you got " + score + "/" + questions.length);
-    </script>
-    <!-- Example Five: Question Game -->
   </body>
 </html>
