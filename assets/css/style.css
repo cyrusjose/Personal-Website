@@ -1,0 +1,26 @@
+.portCard {
+    width: 18rem;
+}
+
+.card-title {
+    padding: 10px;
+}
+
+.pexelImage,
+.portCard {
+    border-radius: 30px;
+}
+
+.topCard {
+    opacity: 0.5;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.topCard:hover {
+    opacity: 1.0;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    box-shadow: 0 0 50px 20px black;
+    border-radius: 30px;
+}
