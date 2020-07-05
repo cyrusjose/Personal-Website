@@ -13,6 +13,8 @@
 
 .topCard {
     opacity: 0.5;
+    box-shadow: 0 0 50px 10px gray;
+    border-radius: 30px;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
