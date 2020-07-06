@@ -1,4 +1,4 @@
-# Around The World
+# Questions
 
 A simple app the utilizes alerts and prompts to interact with the user
 
